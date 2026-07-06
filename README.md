@@ -294,11 +294,12 @@ python run.py
 # Technologies Used
 
 - Python
-- Ollama
+- Ollama (local LLM runtime)
 - Llama 3.1 8B
-- Sentence Transformers
+- Sentence Transformers (all-MiniLM-L6-v2)
 - scikit-learn
 - NumPy
+- JSON Lines
 
 ---
 
@@ -317,6 +318,11 @@ python run.py
 - Rule-based evaluation cannot fully capture human judgment
 - Retrieval uses cosine similarity only (no reranking)
 
+### Why not a hosted API?
+
+Using Ollama avoids external API dependencies and allows the project to be reproduced locally by reviewers. The trade-off is that inference is slower than commercial hosted models, but the setup is simple, free, and self-contained.
+
+
 ---
 
 # Future Improvements
@@ -329,16 +335,27 @@ python run.py
 
 ---
 
-# AI Tools Used
+## AI Tools Used
 
-AI tools were used to assist with:
+This project uses AI in two different ways.
 
-- brainstorming the overall architecture
-- generating boilerplate code
+### During Development
+
+AI-assisted coding tools were used for:
+
+- brainstorming the project architecture
 - refining prompts
+- generating boilerplate code
 - improving documentation
 
-The project design, integration, testing, and final implementation were completed by the author.
+### During Runtime
+
+The actual email suggestions are generated using:
+
+- **Ollama**
+- **Llama 3.1 8B**
+
+The model is grounded using retrieved historical email-response pairs before generating a suggested reply.
 
 ---
 
