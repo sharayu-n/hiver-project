@@ -355,3 +355,17 @@ The project design, integration, testing, and final implementation were complete
 ✅ Overall evaluation summary
 
 ✅ End-to-end runnable pipeline
+
+# Screenshots
+
+## Response Generation
+
+![Response generation output](images/generation-output.png)
+
+This shows the local Ollama model generating suggested replies for the synthetic support dataset.
+
+## Evaluation Summary
+
+![Evaluation summary output](images/evaluation-summary.png)
+
+This shows the per-run evaluation summary with overall score and metric breakdown.
