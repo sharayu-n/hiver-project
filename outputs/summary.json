@@ -1,0 +1,9 @@
+{
+  "num_examples": 32,
+  "overall_score": 77.45,
+  "avg_coverage": 63.54,
+  "avg_groundedness": 93.75,
+  "avg_tone": 90.62,
+  "avg_format": 100.0,
+  "avg_brevity": 100.0
+}
